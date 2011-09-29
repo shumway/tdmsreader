@@ -1,16 +1,31 @@
-
 SRCDIR = src
+OBJDIR = obj
 INCDIR = include
 BINDIR = bin
-CXXFLAGS += -I$(INCDIR)
+CXXFLAGS += -I $(INCDIR)
 
-SRC = $(SRCDIR)/Channel.cpp $(SRCDIR)/DataArray.cpp $(SRCDIR)/DataType.cpp $(SRCDIR)/DataValue.cpp $(SRCDIR)/Error.cpp $(SRCDIR)/Group.cpp $(SRCDIR)/LeadIn.cpp $(SRCDIR)/MetaData.cpp $(SRCDIR)/Object.cpp $(SRCDIR)/ObjectDefaults.cpp $(SRCDIR)/Root.cpp $(SRCDIR)/TDMSData.cpp $(SRCDIR)/TDMSReader.cpp $(SRCDIR)/testTDMS.cpp
 
-OBJ = $(SRC:.cpp=.o)
+#all: $(BINDIR)/testTDMS
 
+
+_DEPS = Channel.h DataArray.h DataType.h DataValue.h Error.h Group.h LeadIn.h MetaData.h Object.h ObjectDefaults.h Root.h TDMSData.h TDMSReader.h
+DEPS = $(patsubst %,$(INCDIR)/%,$(_DEPS))
+
+_SRC = Channel.cpp DataArray.cpp DataType.cpp DataValue.cpp Error.cpp Group.cpp LeadIn.cpp MetaData.cpp Object.cpp ObjectDefaults.cpp Root.cpp TDMSData.cpp TDMSReader.cpp testTDMS.cpp
+_OBJ = $(_SRC:.cpp=.o)
+OBJ = $(patsubst %,$(OBJDIR)/%,$(_OBJ))
+
+
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
 $(BINDIR)/testTDMS: $(OBJ)
-	$(CXX) -o $(BINDIR)/testTDMS $(OBJ)
+	echo $(OBJ)
+	$(CXX) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: clean
 
 clean:
-	- rm $(BINDIR)/testTDMS
+	-rm -f $(OBJDIR)/*.o *~ core $(INCDIR)/*~ 
+	-rm -f $(BINDIR)/*
