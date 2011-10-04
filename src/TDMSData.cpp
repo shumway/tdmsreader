@@ -36,10 +36,10 @@ void TDMSData::storeObjects(const MetaData *metaData) {
         if (channel==0) {
           channel = new Channel(channelName);
           group->addChannel(channel);
-          if ((*obj)->hasRawData()) {
-            channel->setDataType((*obj)->getDataType());
-            channel->addRawData((*obj)->getRawData()); 
-          }
+        }
+        if ((*obj)->hasRawData()) {
+          channel->setDataType((*obj)->getDataType());
+          channel->addRawData((*obj)->getRawData()); 
         }
       }
     }

@@ -21,6 +21,7 @@ void MetaData::readRawData() {
        object != objects.end(); ++object) {
     if ((*object)->hasRawData()) {
       (*object)->readRawData();
+    } else {
     }
   }
 }
