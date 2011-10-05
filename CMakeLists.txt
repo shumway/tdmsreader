@@ -1,0 +1,8 @@
+cmake_minimum_required (VERSION 2.6)
+
+project (TDMSREADER)
+set (TDMSREADER_VERSION_MAJOR 0)
+set (TDMSREADER_VERSION_MINOR 5)
+
+SET(EXECUTABLE_OUTPUT_PATH ${TDMSREADER_BINARY_DIR}/bin)
+add_subdirectory(src)
