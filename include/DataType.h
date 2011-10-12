@@ -11,14 +11,14 @@ class DataArray;
 
 class DataType {
 public:
-  static const DataType* fromIndex(unsigned int itype);
+  DataType() {}
+  virtual ~DataType() {}
   virtual DataValue* readValue(std::ifstream &infile) const=0;
   virtual DataArray* readArray(std::ifstream &infile,
     unsigned int size, unsigned int nbytes) const=0;
   virtual DataArray* newArray(unsigned int size, unsigned int nbytes) const=0;
-  virtual void print(std::ostream &os) const;
+  virtual void print(std::ostream &os) const {}
 private:
-  static std::map<int, const DataType*> singletonObjects;
   int itype;
 };
 

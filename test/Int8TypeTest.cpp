@@ -6,23 +6,22 @@ namespace {
 class Int8TypeTest : public ::testing::Test {
  protected:
 
-  Int8TypeTest() {}
+  Int8TypeTest() {
+    int8type = new Int8Type();
+  }
 
-  virtual ~Int8TypeTest() {}
+  virtual ~Int8TypeTest() {
+    delete int8type;
+  }
 
   virtual void SetUp() {}
 
   virtual void TearDown() {}
+
+  const DataType* int8type;
 };
 
 TEST_F(Int8TypeTest, DoesXyz) {
   // Exercises the Xyz feature of Foo.
 }
-
 }
-
-int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
-

@@ -8,8 +8,6 @@
 #include "Error.h"
 
 
-std::map<int, const DataType*> DataType::singletonObjects;
-
 DataValue* Int8::readValue(std::ifstream &infile) const {
   char data;
   infile.read(&data, 1);
@@ -244,30 +242,4 @@ DataArray* Bool::readArray(std::ifstream &infile, unsigned int size,
 DataArray* Bool::newArray(unsigned int size, unsigned int nbytes) const {
   bool* data = new bool[size];
   return new BoolArray(this, data, size);
-}
-
-const DataType* DataType::fromIndex(unsigned int itype) {
-  if (singletonObjects.size() == 0) {
-    //std::cout << "initializing objects" << std::endl;
-    singletonObjects[1] = new Int8();
-    singletonObjects[2] = new Int16();
-    singletonObjects[3] = new Int32();
-    singletonObjects[4] = new Int64();
-    singletonObjects[5] = new UInt8();
-    singletonObjects[6] = new UInt16();
-    singletonObjects[7] = new UInt32();
-    singletonObjects[8] = new UInt64();
-    singletonObjects[9] = new Float32();
-    singletonObjects[10] = new Float64();
-    singletonObjects[11] = new Float128();
-    singletonObjects[32] = new String();
-    singletonObjects[33] = new Bool();
-  }
-  if (singletonObjects.count(itype)==0) {
-    throw IOError("Unimplented data type");
-  }
-  return singletonObjects[itype];
-}
-
-void DataType::print(std::ostream &os) const {
 }

@@ -8,7 +8,7 @@ class DataType;
 class DataValue {
 public:
   DataValue(const DataType*);
-  virtual ~DataValue();
+  virtual ~DataValue() {}
 private:
   const DataType *type;
 };

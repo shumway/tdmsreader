@@ -6,6 +6,7 @@
 #include "Object.h"
 #include "ObjectDefaults.h"
 #include "DataType.h"
+#include "DataTypeFactory.h"
 
 Object::Object(std::ifstream &infile, ObjectDefaults *objectDefaults)
   : infile(infile), objectDefaults(objectDefaults), rawData(0) {
@@ -26,7 +27,7 @@ Object::Property Object::readProperty() {
   std::string name(buffer, strlen);
   unsigned int itype;
   infile.read((char*)&itype, 4);
-  const DataType *dataType = DataType::fromIndex(itype);
+  const DataType *dataType = DataTypeFactory::instanceFromIndex(itype);
   DataValue *value = dataType->readValue(infile); 
   return Property(name, value);
 } 
@@ -45,7 +46,7 @@ void Object::readRawDataInfo() {
   if (flagHasRawData && rawDataIndex>0) {
     unsigned int itype;
     infile.read((char*)&itype, 4);
-    dataType = DataType::fromIndex(itype);
+    dataType = DataTypeFactory::instanceFromIndex(itype);
     infile.read((char*)&dimension, 4);
     infile.read((char*)&nvalue, 8);
     if (itype == 32) {

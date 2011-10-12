@@ -1,22 +1,6 @@
 #include "DataArray.h"
 #include <iostream>
 
-DataArray::DataArray(const DataType *type, unsigned int size, int sizeOf)
-  : type(type), size(size), sizeOf(sizeOf) {
-}
-
-DataArray::DataArray(const DataType *type, unsigned int size, int sizeOf,
-  void *data)
-  : type(type), size(size), sizeOf(sizeOf), data(data) {
-}
-
-DataArray::~DataArray() {
-}
-
-Int8Array::Int8Array(const DataType* type, char* data, unsigned int size) 
-  : DataArray(type, size, 1), data(data) {
-}
-
 Int16Array::Int16Array(const DataType* type, short* data, unsigned int size) 
   : DataArray(type, size, 2, data) {
 }
