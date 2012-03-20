@@ -7,24 +7,6 @@
 #include "types/DataArray.h"
 #include "Error.h"
 
-DataValue* UInt32::readValue(std::ifstream &infile) const {
-  unsigned int data;
-  infile.read((char*)&data, 4);
-  return new UInt32Value(this,data);
-}
-
-DataArray* UInt32::readArray(std::ifstream &infile, unsigned int size,
-    unsigned int nbytes) const {
-  unsigned int* data = new unsigned int[size];
-  infile.read((char*)data, 4*size);
-  return new UInt32Array(this, data, size);
-}
-
-DataArray* UInt32::newArray(unsigned int size, unsigned int nbytes) const {
-  unsigned int* data = new unsigned int[size];
-  return new UInt32Array(this, data, size);
-}
-
 DataValue* UInt64::readValue(std::ifstream &infile) const {
   unsigned long long data;
   infile.read((char*)&data, 8);
