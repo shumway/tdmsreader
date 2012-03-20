@@ -11,4 +11,4 @@ set (SOURCES
 )
 
 
-# add_subdirectory(test)
+add_subdirectory(test)

@@ -29,15 +29,15 @@ endif()
     set(SRC_DIR ${TDMSREADER_SOURCE_DIR}/src)
     include_directories(${SRC_DIR})
 
-#    add_executable(TDMSReaderTest
-#        Int8TypeTest.cpp
-#        ../types/Int8Type.cpp
-#        ../types/Int8Array.cpp
-#        ../types/Int8Value.cpp
-#        ../types/DataValue.cpp
-#    )
-#  
-#    target_link_libraries(TDMSReaderTest ${GTEST_BOTH_LIBRARIES} -lpthread)
+    add_executable(TypesTest
+        Int8TypeTest.cpp
+        ../Int8Type.cpp
+        ../Int8Array.cpp
+        ../Int8Value.cpp
+        ../DataValue.cpp
+    )
+  
+    target_link_libraries(TypesTest ${GTEST_BOTH_LIBRARIES} -lpthread)
   
 else()
     message(AUTHOR_WARNING "** GTEST not found, unit testing not enabled") 
