@@ -16,6 +16,9 @@ set (SOURCES
     types/Int64.cpp
     types/Int64Array.cpp
     types/Int64Value.cpp
+    types/UInt8.cpp
+    types/UInt8Array.cpp
+    types/UInt8Value.cpp
     PARENT_SCOPE
 )
 

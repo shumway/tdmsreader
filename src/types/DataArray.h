@@ -22,12 +22,6 @@ private:
   void* data;
 };
 
-class UInt8Array : public DataArray {
-public:
-  UInt8Array(const DataType* type, unsigned char* data, unsigned int size);
-  unsigned char* data;
-};
-
 class UInt16Array : public DataArray {
 public:
   UInt16Array(const DataType* type, unsigned short* data, unsigned int size);

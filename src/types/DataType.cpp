@@ -7,24 +7,6 @@
 #include "types/DataArray.h"
 #include "Error.h"
 
-DataValue* UInt8::readValue(std::ifstream &infile) const {
-  unsigned char data;
-  infile.read((char*)&data, 1);
-  return new UInt8Value(this,data);
-}
-
-DataArray* UInt8::readArray(std::ifstream &infile, unsigned int size,
-    unsigned int nbytes) const {
-  unsigned char* data = new unsigned char[size];
-  infile.read((char*)data, size);
-  return new UInt8Array(this, data, size);
-}
-
-DataArray* UInt8::newArray(unsigned int size, unsigned int nbytes) const {
-  unsigned char* data = new unsigned char[size];
-  return new UInt8Array(this, data, size);
-}
-
 DataValue* UInt16::readValue(std::ifstream &infile) const {
   unsigned short data;
   infile.read((char*)&data, 2);
