@@ -31,10 +31,10 @@ endif()
 
     add_executable(TDMSREADERTest
         Int8TypeTest.cpp
-        ../Int8Type.cpp
-        ../Int8Array.cpp
-        ../Int8Value.cpp
-        ../DataValue.cpp
+        ../types/Int8Type.cpp
+        ../types/Int8Array.cpp
+        ../types/Int8Value.cpp
+        ../types/DataValue.cpp
     )
   
     target_link_libraries(TDMSREADERTest ${GTEST_BOTH_LIBRARIES} -lpthread)

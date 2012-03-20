@@ -2,7 +2,7 @@
 #include <config.h>
 #include "TDMSData.h"
 #include "Group.h"
-#include "DataArray.h"
+#include "types/DataArray.h"
 
 
 int main(int argc, char** argv) {

@@ -5,8 +5,8 @@
 
 #include "Object.h"
 #include "ObjectDefaults.h"
-#include "DataType.h"
-#include "DataTypeFactory.h"
+#include "types/DataType.h"
+#include "types/DataTypeFactory.h"
 
 Object::Object(std::ifstream &infile, ObjectDefaults *objectDefaults)
   : infile(infile), objectDefaults(objectDefaults), rawData(0) {

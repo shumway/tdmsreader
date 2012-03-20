@@ -2,7 +2,7 @@
 #define CHANNEL_H
 
 #include <vector>
-#include "DataType.h"
+#include "types/DataType.h"
 class DataArray;
 
 class Channel {

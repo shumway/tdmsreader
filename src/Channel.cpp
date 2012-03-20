@@ -1,5 +1,5 @@
 #include "Channel.h"
-#include "DataArray.h"
+#include "types/DataArray.h"
 #include <cstring>
 
 Channel::Channel(const std::string& name)

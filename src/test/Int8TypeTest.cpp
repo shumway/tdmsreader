@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Int8Type.h"
+#include "types/Int8Type.h"
 
 namespace {
 
