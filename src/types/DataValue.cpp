@@ -2,11 +2,6 @@
 
 DataValue::DataValue(const DataType*) : type(type) {}
 
-
-UInt64Value::UInt64Value(const DataType* type, unsigned long long data) 
-  : DataValue(type), data(data) {
-}
-
 Float32Value::Float32Value(const DataType* type, float data)
   : DataValue(type), data(data) {
 }

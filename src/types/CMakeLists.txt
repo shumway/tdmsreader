@@ -25,6 +25,9 @@ set (SOURCES
     types/UInt32.cpp
     types/UInt32Array.cpp
     types/UInt32Value.cpp
+    types/UInt64.cpp
+    types/UInt64Array.cpp
+    types/UInt64Value.cpp
     PARENT_SCOPE
 )
 
