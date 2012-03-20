@@ -13,12 +13,6 @@ private:
   const DataType *type;
 };
 
-class StringValue : public DataValue {
-public:
-  StringValue(const DataType* type, const std::string &data);
-  const std::string data;
-};
-
 class BoolValue : public DataValue {
 public:
   BoolValue(const DataType* type, bool data);

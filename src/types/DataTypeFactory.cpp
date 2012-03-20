@@ -11,6 +11,7 @@
 #include "types/Float32.h"
 #include "types/Float64.h"
 #include "types/Float128.h"
+#include "types/String.h"
 
 std::map<int, const DataType*> DataTypeFactory::singletonObjects;
 

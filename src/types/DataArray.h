@@ -22,14 +22,6 @@ private:
   void* data;
 };
 
-class StringArray : public DataArray {
-public:
-  StringArray(const DataType* type, char* data, unsigned int size,
-    unsigned long int nbytes);
-  char* data;
-  unsigned long int nbytes;
-};
-
 class BoolArray : public DataArray {
 public:
   BoolArray(const DataType* type, bool* data, unsigned int size);

@@ -37,6 +37,9 @@ set (SOURCES
     types/Float128.cpp
     types/Float128Array.cpp
     types/Float128Value.cpp
+    types/String.cpp
+    types/StringArray.cpp
+    types/StringValue.cpp
     PARENT_SCOPE
 )
 
