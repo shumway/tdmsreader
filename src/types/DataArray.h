@@ -22,9 +22,4 @@ private:
   void* data;
 };
 
-class BoolArray : public DataArray {
-public:
-  BoolArray(const DataType* type, bool* data, unsigned int size);
-  bool* data;
-};
 #endif

@@ -1,11 +1,6 @@
-#include <string>
-#include <fstream>
-#include <map>
-
-#include "types/DataType.h"
-#include "types/DataValue.h"
-#include "types/DataArray.h"
-#include "Error.h"
+#include "types/Bool.h"
+#include "types/BoolArray.h"
+#include "types/BoolValue.h"
 
 DataValue* Bool::readValue(std::ifstream &infile) const {
   bool data;

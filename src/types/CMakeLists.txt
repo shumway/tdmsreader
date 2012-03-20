@@ -1,7 +1,5 @@
 set (SOURCES
     ${SOURCES}
-    types/DataType.cpp
-    types/DataArray.cpp
     types/DataValue.cpp
     types/DataTypeFactory.cpp
     types/Int8.cpp
@@ -40,6 +38,9 @@ set (SOURCES
     types/String.cpp
     types/StringArray.cpp
     types/StringValue.cpp
+    types/Bool.cpp
+    types/BoolArray.cpp
+    types/BoolValue.cpp
     PARENT_SCOPE
 )
 
