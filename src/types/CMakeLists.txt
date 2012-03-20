@@ -19,6 +19,9 @@ set (SOURCES
     types/UInt8.cpp
     types/UInt8Array.cpp
     types/UInt8Value.cpp
+    types/UInt16.cpp
+    types/UInt16Array.cpp
+    types/UInt16Value.cpp
     PARENT_SCOPE
 )
 

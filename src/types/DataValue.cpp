@@ -2,10 +2,6 @@
 
 DataValue::DataValue(const DataType*) : type(type) {}
 
-UInt16Value::UInt16Value(const DataType* type, unsigned short data) 
-  : DataValue(type), data(data) {
-}
-
 UInt32Value::UInt32Value(const DataType* type, unsigned int data) 
   : DataValue(type), data(data) {
 }

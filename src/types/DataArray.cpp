@@ -1,11 +1,6 @@
 #include "DataArray.h"
 #include <iostream>
 
-UInt16Array::UInt16Array(const DataType* type, unsigned short* data,
-  unsigned int size) 
-  : DataArray(type, size, 2), data(data) {
-}
-
 UInt32Array::UInt32Array(const DataType* type, unsigned int* data,
   unsigned int size) 
   : DataArray(type, size, 4), data(data) {

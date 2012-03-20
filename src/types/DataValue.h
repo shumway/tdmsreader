@@ -13,12 +13,6 @@ private:
   const DataType *type;
 };
 
-class UInt16Value : public DataValue {
-public:
-  UInt16Value(const DataType* type, unsigned short data);
-  unsigned short data;
-};
-
 class UInt32Value : public DataValue {
 public:
   UInt32Value(const DataType* type, unsigned int data);
