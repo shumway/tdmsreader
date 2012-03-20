@@ -13,12 +13,6 @@ private:
   const DataType *type;
 };
 
-class Int32Value : public DataValue {
-public:
-  Int32Value(const DataType* type, int data) ;
-  int data;
-};
-
 class Int64Value : public DataValue {
 public:
   Int64Value(const DataType* type, long long data);

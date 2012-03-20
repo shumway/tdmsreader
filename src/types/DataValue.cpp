@@ -2,10 +2,6 @@
 
 DataValue::DataValue(const DataType*) : type(type) {}
 
-Int32Value::Int32Value(const DataType* type, int data) 
-  : DataValue(type), data(data) {
-}
-
 Int64Value::Int64Value(const DataType* type, long long data) 
   : DataValue(type), data(data) {
 }

@@ -10,6 +10,9 @@ set (SOURCES
     types/Int16.cpp
     types/Int16Value.cpp
     types/Int16Array.cpp
+    types/Int32.cpp
+    types/Int32Value.cpp
+    types/Int32Array.cpp
     PARENT_SCOPE
 )
 
