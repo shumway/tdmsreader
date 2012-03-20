@@ -2,10 +2,6 @@
 
 DataValue::DataValue(const DataType*) : type(type) {}
 
-Float32Value::Float32Value(const DataType* type, float data)
-  : DataValue(type), data(data) {
-}
-
 Float64Value::Float64Value(const DataType* type, double data)
   : DataValue(type), data(data) {
 }

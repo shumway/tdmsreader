@@ -22,12 +22,6 @@ private:
   void* data;
 };
 
-class Float32Array : public DataArray {
-public:
-  Float32Array(const DataType* type, float* data, unsigned int size);
-  float* data;
-};
-
 class Float64Array : public DataArray {
 public:
   Float64Array(const DataType* type, double* data, unsigned int size);

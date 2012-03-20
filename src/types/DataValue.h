@@ -13,12 +13,6 @@ private:
   const DataType *type;
 };
 
-class Float32Value : public DataValue {
-public:
-  Float32Value(const DataType* type, float data);
-  float data;
-};
-
 class Float64Value : public DataValue {
 public:
   Float64Value(const DataType* type, double data);

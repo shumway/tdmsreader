@@ -28,6 +28,9 @@ set (SOURCES
     types/UInt64.cpp
     types/UInt64Array.cpp
     types/UInt64Value.cpp
+    types/Float32.cpp
+    types/Float32Array.cpp
+    types/Float32Value.cpp
     PARENT_SCOPE
 )
 
