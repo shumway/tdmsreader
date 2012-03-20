@@ -22,11 +22,6 @@ private:
   void* data;
 };
 
-class Int8Array : public DataArray {
-public:
-  Int8Array(const DataType* type, char* data, unsigned int size);
-  char* data;
-};
 
 class Int16Array : public DataArray {
 public:

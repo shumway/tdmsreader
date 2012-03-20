@@ -2,29 +2,12 @@
 #include <fstream>
 #include <map>
 
-#include "DataType.h"
-#include "DataValue.h"
-#include "DataArray.h"
+#include "types/DataType.h"
+#include "types/DataValue.h"
+#include "types/DataArray.h"
 #include "Error.h"
 
 
-DataValue* Int8::readValue(std::ifstream &infile) const {
-  char data;
-  infile.read(&data, 1);
-  return new Int8Value(this,data);
-}
-
-DataArray* Int8::readArray(std::ifstream &infile, unsigned int size,
-    unsigned int nbytes) const {
-  char* data = new char[size];
-  infile.read(data, size);
-  return new Int8Array(this, data, size);
-}
-
-DataArray* Int8::newArray(unsigned int size, unsigned int nbytes) const {
-  char* data = new char[size];
-  return new Int8Array(this, data, size);
-}
 
 DataValue* Int16::readValue(std::ifstream &infile) const {
   short data;

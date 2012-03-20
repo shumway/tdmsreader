@@ -13,12 +13,6 @@ private:
   const DataType *type;
 };
 
-class Int8Value : public DataValue {
-public:
-  Int8Value(const DataType* type, char data);
-  char data;
-};
-
 class Int16Value : public DataValue {
 public:
   Int16Value(const DataType* type, short data);

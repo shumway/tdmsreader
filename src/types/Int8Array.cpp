@@ -1,4 +1,4 @@
-#include "DataArray.h"
+#include "Int8Array.h"
 #include <iostream>
 
 Int8Array::Int8Array(const DataType* type, char* data, unsigned int size) 

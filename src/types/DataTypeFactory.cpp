@@ -1,8 +1,9 @@
-#include "DataType.h"
-#include "DataTypeFactory.h"
-#include "DataValue.h"
-#include "DataArray.h"
+#include "types/DataType.h"
+#include "types/DataTypeFactory.h"
+#include "types/DataValue.h"
+#include "types/DataArray.h"
 #include "Error.h"
+#include "types/Int8.h"
 
 
 std::map<int, const DataType*> DataTypeFactory::singletonObjects;
