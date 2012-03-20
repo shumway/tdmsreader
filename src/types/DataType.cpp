@@ -7,24 +7,6 @@
 #include "types/DataArray.h"
 #include "Error.h"
 
-DataValue* Int64::readValue(std::ifstream &infile) const {
-  long long data;
-  infile.read((char*)&data, 8);
-  return new Int64Value(this,data);
-}
-
-DataArray* Int64::readArray(std::ifstream &infile, unsigned int size,
-    unsigned int nbytes) const {
-  long long* data = new long long[size];
-  infile.read((char*)data, 8*size);
-  return new Int64Array(this, data, size);
-}
-
-DataArray* Int64::newArray(unsigned int size, unsigned int nbytes) const {
-  long long* data = new long long[size];
-  return new Int64Array(this, data, size);
-}
-
 DataValue* UInt8::readValue(std::ifstream &infile) const {
   unsigned char data;
   infile.read((char*)&data, 1);

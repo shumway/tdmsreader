@@ -2,6 +2,8 @@
 #define DATA_TYPE_FACTORY_H
 
 class DataType;
+#include <map>
+
 
 class DataTypeFactory {
 public:

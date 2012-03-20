@@ -13,12 +13,6 @@ private:
   const DataType *type;
 };
 
-class Int64Value : public DataValue {
-public:
-  Int64Value(const DataType* type, long long data);
-  long long data;
-};
-
 class UInt8Value : public DataValue {
 public:
   UInt8Value(const DataType* type, unsigned char data);

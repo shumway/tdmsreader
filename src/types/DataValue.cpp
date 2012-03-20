@@ -2,10 +2,6 @@
 
 DataValue::DataValue(const DataType*) : type(type) {}
 
-Int64Value::Int64Value(const DataType* type, long long data) 
-  : DataValue(type), data(data) {
-}
-
 UInt8Value::UInt8Value(const DataType* type, unsigned char data) 
   : DataValue(type), data(data) {
 }

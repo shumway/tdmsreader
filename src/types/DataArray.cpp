@@ -1,11 +1,6 @@
 #include "DataArray.h"
 #include <iostream>
 
-Int64Array::Int64Array(const DataType* type, long long* data, 
-  unsigned int size) 
-  : DataArray(type, size, 8), data(data) {
-}
-
 UInt8Array::UInt8Array(const DataType* type, unsigned char* data,
   unsigned int size) 
   : DataArray(type, size, 1), data(data) {
