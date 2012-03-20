@@ -1,10 +1,6 @@
 #include "DataArray.h"
 #include <iostream>
 
-Int16Array::Int16Array(const DataType* type, short* data, unsigned int size) 
-  : DataArray(type, size, 2, data) {
-}
-
 Int32Array::Int32Array(const DataType* type, int* data, unsigned int size) 
   : DataArray(type, size, 4), data(data) {
 }

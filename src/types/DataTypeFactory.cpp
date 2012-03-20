@@ -4,6 +4,7 @@
 #include "types/DataArray.h"
 #include "Error.h"
 #include "types/Int8.h"
+#include "types/Int16.h"
 
 
 std::map<int, const DataType*> DataTypeFactory::singletonObjects;

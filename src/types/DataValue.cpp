@@ -2,10 +2,6 @@
 
 DataValue::DataValue(const DataType*) : type(type) {}
 
-Int16Value::Int16Value(const DataType* type, short data) 
-  : DataValue(type), data(data) {
-}
-
 Int32Value::Int32Value(const DataType* type, int data) 
   : DataValue(type), data(data) {
 }

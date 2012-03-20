@@ -30,8 +30,8 @@ endif()
     include_directories(${SRC_DIR})
 
     add_executable(TypesTest
-        Int8TypeTest.cpp
-        ../Int8Type.cpp
+        Int8Test.cpp
+        ../Int8.cpp
         ../Int8Array.cpp
         ../Int8Value.cpp
         ../DataValue.cpp
