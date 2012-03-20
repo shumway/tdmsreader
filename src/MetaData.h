@@ -9,17 +9,17 @@ class Object;
 
 class MetaData {
 public:
-  typedef std::list<Object*> ObjectList;
-  MetaData(std::ifstream &infile, ObjectDefaults* objectDefaults);
-  void readObjectCount();
-  void readRawData();
-  void print() const;
-  const ObjectList& getObjectList() const {return objects;}
+    typedef std::list<Object*> ObjectList;
+    MetaData(std::ifstream &infile, ObjectDefaults* objectDefaults);
+    void readObjectCount();
+    void readRawData();
+    void print() const;
+    const ObjectList& getObjectList() const;
 private:
-  std::ifstream& infile;
-  ObjectDefaults *objectDefaults;
-  unsigned int objectCount;
-  ObjectList objects;
+    std::ifstream& infile;
+    ObjectDefaults *objectDefaults;
+    unsigned int objectCount;
+    ObjectList objects;
 };
 
 #endif

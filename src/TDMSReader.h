@@ -7,13 +7,13 @@ class TDMSData;
 
 class TDMSReader {
 public:
-  TDMSReader();
-  ~TDMSReader();
-  void checkSizeOfTypes();
-  void read(const std::string &filename, TDMSData*, const bool verbose=true);
+    TDMSReader();
+    ~TDMSReader();
+    void checkSizeOfTypes();
+    void read(const std::string &filename, TDMSData*, const bool verbose=true);
 private:
-  ObjectDefaults* objectDefaults;
-  MetaData* metaData;
+    ObjectDefaults* objectDefaults;
+    MetaData* metaData;
 };
 
 #endif

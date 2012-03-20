@@ -15,5 +15,4 @@ add_subdirectory(types)
 
 add_executable(readTDMS ${SOURCES} main.cpp)
 
-
 add_subdirectory(test)

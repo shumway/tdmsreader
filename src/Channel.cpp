@@ -1,4 +1,5 @@
 #include "Channel.h"
+#include "types/DataType.h"
 #include "types/DataArray.h"
 #include <cstring>
 
@@ -34,3 +35,17 @@ const DataArray* Channel::getData() const {
   }
   return data;
 }
+
+const std::string & Channel::getName() const {
+    return name;
+}
+
+void Channel::setDataType(const DataType *type) {
+    dataType = type;
+}
+
+unsigned int Channel::getDataCount() const {
+    return ndata;
+}
+
+

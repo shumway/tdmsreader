@@ -7,9 +7,9 @@ class Object;
 
 class ObjectDefaults {
 public:
-  void initializeObject(Object* obj);
+    void initializeObject(Object* obj);
 private:
-  std::map<std::string, const Object*> objects;
+    std::map<std::string, const Object*> objects;
 };
 
 #endif
