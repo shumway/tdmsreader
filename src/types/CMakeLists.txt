@@ -31,6 +31,12 @@ set (SOURCES
     types/Float32.cpp
     types/Float32Array.cpp
     types/Float32Value.cpp
+    types/Float64.cpp
+    types/Float64Array.cpp
+    types/Float64Value.cpp
+    types/Float128.cpp
+    types/Float128Array.cpp
+    types/Float128Value.cpp
     PARENT_SCOPE
 )
 

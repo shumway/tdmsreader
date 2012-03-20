@@ -9,6 +9,8 @@
 #include "types/UInt32.h"
 #include "types/UInt64.h"
 #include "types/Float32.h"
+#include "types/Float64.h"
+#include "types/Float128.h"
 
 std::map<int, const DataType*> DataTypeFactory::singletonObjects;
 
