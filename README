@@ -1,0 +1,5 @@
+This code is orphaned! The science project that we used it for switched back to 
+matlab, so we are no longer reading TDMS files from C++. The code should be usable as 
+is. If anyone wants to work on it or maintain it feel free to take it. You can contact
+me (john.shumwayjr) with any questions. I'd be happy to help out if I knew that 
+someone found it useful.
